@@ -479,17 +479,38 @@ angular.module('myApp.controllers', []).
     .controller('AppCtrl', ['$scope', '$routeParams', '$compile', '$http', '$rootScope', '$sce', '$window',
         '$location',
         function ($scope, $routeParams, $compile, $http, $rootScope, $sce, $window, $location) {
+                            $rootScope.blackOverlay=false;
+                            $rootScope.toggleSidebar=function(){
+                            $rootScope.toggle("mainSidebar");
+                            if($rootScope.blackOverlay == false){
+                                $rootScope.blackOverlay=true;
+                            }else{
+                                $rootScope.blackOverlay=false;
+                            }
+                            }
             $rootScope.myswiperight = function() {    
                 if (!$("body").hasClass("sidebar-left-in")) {
                     $rootScope.toggle("mainSidebar");
                 }
+                            
+                            if($rootScope.blackOverlay == false){
+                            $rootScope.blackOverlay=true;
+                            }else{
+                            $rootScope.blackOverlay=false;
+                            }
 
             }
             $rootScope.myswipeleft = function() {
                 if ($("body").hasClass("sidebar-left-in")) {
                     $rootScope.toggle("mainSidebar");
                 }
-            }  
+                
+                            if($rootScope.blackOverlay == false){
+                            $rootScope.blackOverlay=true;
+                            }else{
+                            $rootScope.blackOverlay=false;
+                            }
+            }
             MyCampusApp.homeScreenDisplayed = false;
             $scope.appname = $routeParams.appid;
             $scope.pageid = $routeParams.pageid;
