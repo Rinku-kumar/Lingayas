@@ -30,9 +30,14 @@
             
             <a aria-label="Home" class="list-group-item" href="#/app/ProfileUpdate/ProfileUpdate" style="padding:0px;padding-left:0px !important;font-size:16px;font-weight:normal;">
                 <div class="form-group" style="margin-bottom:0px;text-align:center;padding:30px 0px;" ng-hide='profileSynced'>
-                    <div class="" style="padding:0px;">
-                        <img ng-src="{{userProfilePic}}" style='height:auto;width:100%;max-height:110px;max-width:110px;overflow: hidden;border-radius:50%;'/>
+                    
+                    <div class="" style="padding:0px;text-align:center;">
+                        <div style="height:auto;width:100%;max-height:110px;max-width:110px;overflow: hidden;border-radius:50%;margin:auto;">
+                        <img ng-src="{{userProfilePic}}" style='width:100%;'/>
                     </div>
+                    </div>
+                    
+                    
                     <div class='openSans' style="margin-top:13px;">
                         <div style='font-size:18px;'>{{userProfileName}}</div>
                         <div style='font-size:12px;'>{{studentRole}}</div>
