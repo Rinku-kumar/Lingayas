@@ -162,9 +162,9 @@
              </div>-->
             <div  style="position:fixed;bottom:0px;width:100%;padding:0;z-index:100;display:none;" class="footerGroupIcons testClass">
                 <div ng-repeat="ag in appgroups">
-                    <div ng-repeat="app in ag.apps" style="padding:6px 0 3px 0;float:left;width:20%;color:#fff;text-align:center;border-bottom:3px solid #fff;opacity:0.7;" ng-show="app.showInDock" class="div{{app.displayname}}">
+                    <div ng-repeat="app in ag.apps" style="padding:6px 0 0px 0;float:left;width:20%;color:#fff;text-align:center;border-bottom:3px solid #fff;opacity:0.7;" ng-show="app.showInDock" class="div{{app.displayname}}">
                         <a aria-label="{{app.displayname}}"  href="#/app/{{app.name}}/{{app.name}}" style="color:#000;text-align:center;text-decoration:none;" class="divA{{app.displayname}}">
-                            <img style="width:50%;" src="{{app.logo}}" alt="">
+                            <img style="width:35%;" src="{{app.logo}}" alt="">
                                 <!--<img style="width:50%;" src="http://findicons.com/files/icons/1580/devine_icons_part_2/128/home.png" alt="">-->
                                 
                                 <div style="font-size:10px;" class='openSans' ng-bind="app.displayname"></div>
