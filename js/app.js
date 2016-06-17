@@ -157,13 +157,14 @@ var MyCampusApp = {
                                                                  });
                 setTimeout(function() {
                     $.unblockUI();
+                    //alert($.jStorage.get('launchedonce'));
+                           
                     if ($.jStorage.get('launchedonce')) {
                         $route.reload();
                     }else {
                         $route.reload();
                         $rootScope.$apply(function () {
-                            //$location.path("/help");
-                        $location.path("/home");
+                            $location.path("/home");
                         });
                     }
                 },100);
