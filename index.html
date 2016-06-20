@@ -174,7 +174,7 @@
                         <a ng-if="app.displayname == 'Notifications'" aria-label="{{app.displayname}}"  href="#/app/{{app.name}}/{{app.name}}" style="color:#000;text-align:center;text-decoration:none;" class="divA{{app.displayname}}">
                             <img style="width:35%;" src="{{app.logo}}" alt="">
                                 <div style="font-size:10px;" class='openSans' ng-bind="app.displayname"></div>
-                                <div class="badge" style="bottom:38%;margin-left:1.6%;position:absolute;font-weight:normal;background:#e30000 none repeat scroll 0% 0%;font-size:10px;-webkit-filter: grayscale(0%) !important;filter: grayscale(0%) !important;" class='notificationCount' ng-bind="notificationCounts" ng-show='ShowPushCounts'>10</div>
+                                <!--<div class="badge" style="bottom:38%;margin-left:1.6%;position:absolute;font-weight:normal;background:#e30000 none repeat scroll 0% 0%;font-size:10px;-webkit-filter: grayscale(0%) !important;filter: grayscale(0%) !important;" class='notificationCount' ng-bind="notificationCounts" ng-show='ShowPushCounts'>10</div>-->
                         </a>
                         
                         
@@ -221,9 +221,9 @@
             
             $.blockUI.defaults.message = '<div style="margin:auto;position:absolute;left:0px;right:0px; vertical-align: middle; display: inline-block"><i class="icon-cog icon-spin icon-5x" style="color:white;"></i><h3 style="color:white;">Loading</h3></div>';
             
-            //if(MyCampusApp.config.serverUrl == "") {
+            if(MyCampusApp.config.serverUrl == "") {
                     onDeviceReady();
-            //}
+            }
             </script>
         <span id="sampleicon" class="icon" style="display:none"></span>
     </body>

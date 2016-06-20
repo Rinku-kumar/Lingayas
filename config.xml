@@ -106,14 +106,14 @@
         <gap:plugin name="ch.ti8m.documenthandler"/>
         <gap:plugin name="cordova-plugin-whitelist" source="npm" />
         <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
-        <gap:plugin name="com.parse.cordova.core.pushplugin" version="0.1.0" />
+        <!--<gap:plugin name="com.parse.cordova.core.pushplugin" version="0.1.0" />-->
         <gap:plugin name="org.apache.cordova.camera" spec="0.3.6" source="pgb" />
         <gap:plugin name="cordova-plugin-actionsheet" source="npm" />
         <!--<gap:plugin name="de.appplant.cordova.plugin.local-notification" />-->
-        <!--<gap:plugin name="com.medlei.pushplugin" version="0.1.2" >
+        <gap:plugin name="com.medlei.pushplugin" version="0.1.2" >
             <param name="APP_ID" value="cj7A96x4ZQzdoAfsRNxspFQFTD400Bueq27dqrzO" />
             <param name="CLIENT_KEY" value="lwd2TvlTLc5QPgrEFPHjZQYcVkNs8Hd9gnBJjdfU" />
-        </gap:plugin>-->
+        </gap:plugin>
         <gap:config-file platform="ios" parent="UIStatusBarHidden" overwrite="true">
             <true/>
         </gap:config-file>
