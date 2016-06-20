@@ -131,7 +131,7 @@
                 <div class="btn-group pull-left sideBarMenu" title="Sidebar Menu" aria-label="Sidebar Menu" name="Sidebar Menu" data-name="Sidebar Menu">
                     <div aria-label="Sidebar Menu" ng-click="toggleSidebar('mainSidebar')" class="btn btn-navbar sidebar-toggle" style='margin-left:5px;'>
                         <img style='width:20px;height:20px;' src="images/hamburger-menu.png" alt="">
-                            <span class="badge" style="margin-top: 10px;margin-left: -12px;position:absolute;font-weight:normal;background:#e30000 none repeat scroll 0% 0%;font-size:10px;" class='notificationCount' ng-bind="notificationCounts" ng-show='ShowPushCounts'>5</span>
+                            <!--<span class="badge" style="margin-top: 10px;margin-left: -12px;position:absolute;font-weight:normal;background:#e30000 none repeat scroll 0% 0%;font-size:10px;" class='notificationCount' ng-bind="notificationCounts" ng-show='ShowPushCounts'>5</span>-->
                             <!--<i class="fa fa-bars fa-2x"></i>-->
                             </div>
                 </div>
@@ -163,12 +163,21 @@
             <div  style="position:fixed;bottom:0px;width:100%;padding:0;z-index:100;display:none;" class="footerGroupIcons testClass">
                 <div ng-repeat="ag in appgroups">
                     <div ng-repeat="app in ag.apps" style="padding:6px 0 0px 0;float:left;width:20%;color:#fff;text-align:center;border-bottom:3px solid #fff;opacity:0.7;" ng-show="app.showInDock" class="div{{app.displayname}}">
-                        <a aria-label="{{app.displayname}}"  href="#/app/{{app.name}}/{{app.name}}" style="color:#000;text-align:center;text-decoration:none;" class="divA{{app.displayname}}">
+                        
+                        <a ng-if="app.displayname != 'Notifications'" aria-label="{{app.displayname}}"  href="#/app/{{app.name}}/{{app.name}}" style="color:#000;text-align:center;text-decoration:none;" class="divA{{app.displayname}}">
                             <img style="width:35%;" src="{{app.logo}}" alt="">
                                 <!--<img style="width:50%;" src="http://findicons.com/files/icons/1580/devine_icons_part_2/128/home.png" alt="">-->
                                 
                                 <div style="font-size:10px;" class='openSans' ng-bind="app.displayname"></div>
-                                </a>
+                         </a>
+                        
+                        <a ng-if="app.displayname == 'Notifications'" aria-label="{{app.displayname}}"  href="#/app/{{app.name}}/{{app.name}}" style="color:#000;text-align:center;text-decoration:none;" class="divA{{app.displayname}}">
+                            <img style="width:35%;" src="{{app.logo}}" alt="">
+                                <div style="font-size:10px;" class='openSans' ng-bind="app.displayname"></div>
+                                <div class="badge" style="bottom:38%;margin-left:1.6%;position:absolute;font-weight:normal;background:#e30000 none repeat scroll 0% 0%;font-size:10px;-webkit-filter: grayscale(0%) !important;filter: grayscale(0%) !important;" class='notificationCount' ng-bind="notificationCounts" ng-show='ShowPushCounts'>10</div>
+                        </a>
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -212,9 +221,9 @@
             
             $.blockUI.defaults.message = '<div style="margin:auto;position:absolute;left:0px;right:0px; vertical-align: middle; display: inline-block"><i class="icon-cog icon-spin icon-5x" style="color:white;"></i><h3 style="color:white;">Loading</h3></div>';
             
-            if(MyCampusApp.config.serverUrl == "") {
+            //if(MyCampusApp.config.serverUrl == "") {
                     onDeviceReady();
-            }
+            //}
             </script>
         <span id="sampleicon" class="icon" style="display:none"></span>
     </body>
