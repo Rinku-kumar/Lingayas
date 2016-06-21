@@ -553,13 +553,14 @@ var MyCampusApp = {
             }
         });
         $rootScope.customStyle = $sce.trustAs($sce.CSS, data.customStyle);
-        try {
+        /** AK Commenting **/
+        /**try {
             var data1 = $compile($(data.homeScreenTemplate))($scope);
             $("#homecontent").html(data1);
             //alert("aa");
         }catch(exce) {
             //Ignore..
-        }
+        }**/
 
         $('#customstyle').html(data.customStyle);
 
