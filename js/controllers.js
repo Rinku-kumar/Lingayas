@@ -266,10 +266,11 @@ angular.module('myApp.controllers', []).
             if(!$rootScope.homeDownloadCompleteAdded) {
                 $rootScope.$on("onDownloadComplete", function(event, data) {
                     $.unblockUI();
-                    $route.reload();
+                    //$route.reload();
                     $rootScope.$apply(function () {
                         //$location.path("/home");
                         //$location.path("/app/FoodDeals/FoodDeals");
+                        MyCampusApp.fillRootScopeForHome($rootScope, $sce, tenant, $window, $location, $route, $http,  $scope, $compile);
                     });
                 });
                 $rootScope.homeDownloadCompleteAdded = true;
