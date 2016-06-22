@@ -152,7 +152,7 @@ var MyCampusApp = {
                // var message = '<div style="margin: 2px; vertical-align: middle; display: inline-block"><i class="icon-cog icon-spin icon-4x"></i><h3 style="color:white;">Initializing..</h3></div>';
                 //var message = '<div style="margin:auto;position:fixed;left:0px;right:0px;vertical-align: middle; display: inline-block"><i class="icon-cog icon-spin icon-4x"></i><h3 style="color:white;">Initializing..</h3></div>';
                 //$.blockUI({message : message});
-                /*$.blockUI({
+                $.blockUI({
                          message: '<div id="floatingBarsG"><div class="blockG" id="rotateG_01"></div><div class="blockG" id="rotateG_02"></div><div class="blockG" id="rotateG_03"></div><div class="blockG" id="rotateG_04"></div><div class="blockG" id="rotateG_05"></div><div class="blockG" id="rotateG_06"></div><div class="blockG" id="rotateG_07"></div><div class="blockG" id="rotateG_08"></div></div><div></div>'
                 });
                 setTimeout(function() {
@@ -167,7 +167,7 @@ var MyCampusApp = {
                             $location.path("/home");
                         });
                     }
-                },100);*/
+                },100);
             }).error(function(data){
                 });
         }
@@ -192,13 +192,13 @@ var MyCampusApp = {
                                                            storedMetadata = data;
                                                            $rootScope.brandingUrl = storedMetadata.brandingurl + "?q=" + Math.random();
                                                            $rootScope.backgroundUrl = storedMetadata.backgroundurl + "?q=" + Math.random();
-                                                           /*$.blockUI({
+                                                           $.blockUI({
                                                                      message: '<div id="floatingBarsG"><div class="blockG" id="rotateG_01"></div><div class="blockG" id="rotateG_02"></div><div class="blockG" id="rotateG_03"></div><div class="blockG" id="rotateG_04"></div><div class="blockG" id="rotateG_05"></div><div class="blockG" id="rotateG_06"></div><div class="blockG" id="rotateG_07"></div><div class="blockG" id="rotateG_08"></div></div><div></div>'
                                                                      });
                                                            setTimeout(function() {
                                                                       $.unblockUI();
                                                                       $route.reload();
-                                                                      },5000);*/
+                                                                      },5000);
                                                            }
                                                            }).error(function(data){
                                                                     });
