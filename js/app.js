@@ -211,7 +211,7 @@ var MyCampusApp = {
             }catch(ex) {
                 
             }
-        }, 2000);
+        }, 4000);
         //Store update bug fix end (Nick)
 
         if(storedMetadata) {
