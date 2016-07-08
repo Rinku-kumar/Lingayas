@@ -263,6 +263,18 @@ angular.module('myApp.controllers', []).
             //alert ("Home Controller called");
             //setTimeout(function () {
                             // alert("aa");
+            $rootScope.$on("mobile-angular-ui.toggle.toggled", function(event, data) {
+                                               // alert(JSON.stringify(data));
+                                            if(data == "mainSidebar"){
+                                                if($rootScope.blackOverlay == false){
+                                                    $rootScope.blackOverlay=true;
+                                                }else{
+                                                    $rootScope.blackOverlay=false;
+                                                }
+                                                $rootScope.$apply();
+                    }
+                                            
+            });
             if(!$rootScope.homeDownloadCompleteAdded) {
                 $rootScope.$on("onDownloadComplete", function(event, data) {
                     $.unblockUI();
@@ -483,22 +495,13 @@ angular.module('myApp.controllers', []).
                             $rootScope.blackOverlay=false;
                             $rootScope.toggleSidebar=function(){
                             $rootScope.toggle("mainSidebar");
-                            if($rootScope.blackOverlay == false){
-                                $rootScope.blackOverlay=true;
-                            }else{
-                                $rootScope.blackOverlay=false;
-                            }
                             }
             $rootScope.myswiperight = function() {    
                 if (!$("body").hasClass("sidebar-left-in")) {
                     $rootScope.toggle("mainSidebar");
                 }
                             
-                            if($rootScope.blackOverlay == false){
-                            $rootScope.blackOverlay=true;
-                            }else{
-                            $rootScope.blackOverlay=false;
-                            }
+                            
 
             }
             $rootScope.myswipeleft = function() {
@@ -506,11 +509,7 @@ angular.module('myApp.controllers', []).
                     $rootScope.toggle("mainSidebar");
                 }
                 
-                            if($rootScope.blackOverlay == false){
-                            $rootScope.blackOverlay=true;
-                            }else{
-                            $rootScope.blackOverlay=false;
-                            }
+                           
             }
             MyCampusApp.homeScreenDisplayed = false;
             $scope.appname = $routeParams.appid;
