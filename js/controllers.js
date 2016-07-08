@@ -263,6 +263,7 @@ angular.module('myApp.controllers', []).
             //alert ("Home Controller called");
             //setTimeout(function () {
                             // alert("aa");
+            $rootScope.blackOverlay = false;
             $rootScope.$on("mobile-angular-ui.toggle.toggled", function(event, data) {
                                                // alert(JSON.stringify(data));
                                             if(data == "mainSidebar"){
